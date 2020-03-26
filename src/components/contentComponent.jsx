@@ -10,6 +10,7 @@ class contentComponent extends Component {
         confirmed: '',
         recovered: '',
         deaths: '',
+        loading: true,
         locations: []
 
     }
@@ -25,6 +26,7 @@ class contentComponent extends Component {
                     recovered: response.latest.recovered,
                     deaths: response.latest.deaths,
                     locations: response.locations,
+                    loading: false
                 })
             })
             .catch(error => {
@@ -36,7 +38,16 @@ class contentComponent extends Component {
 
 
     render() {
-
+        let displayUI;
+        if (this.state.loading) {
+            displayUI = <div className="text-center">
+                <div class="spinner-grow text-primary" role="status">
+                    <span class="sr-only">Loading...</span>
+                </div>
+            </div>
+        } else {
+            displayUI = <Stats locations={this.state.locations} />
+        }
         return (
             <div>
                 <div className="alert alert-info mt-4" role="alert">
@@ -52,7 +63,7 @@ class contentComponent extends Component {
                 <div className="mt-4">
                     <h5>Cases by country wise</h5>
                     <h6 className="card-subtitle mb-2 text-muted">Total number of countries <span className="badge badge-info">{this.state.locations.length}</span></h6>
-                    <Stats locations={this.state.locations} />
+                    {displayUI}
                 </div>
 
             </div>
