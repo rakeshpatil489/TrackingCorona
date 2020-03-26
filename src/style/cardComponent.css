@@ -1,0 +1,24 @@
+.deathColor
+{
+    color:#e0551e;
+    background-color: #f135062a !important;
+   
+    
+}
+.recoveryColor
+{
+    color:#38c70d;
+    background-color: rgba(80, 207, 21, 0.164) !important;
+  
+}
+.positiveColor
+{
+    color:#0e88da;
+    background-color: #0c85d627 !important;
+   
+}
+.card
+{
+    border: none !important;
+    border-radius:8px !important;
+}
