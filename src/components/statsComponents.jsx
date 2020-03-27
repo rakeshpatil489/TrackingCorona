@@ -17,13 +17,13 @@ class statsComponents extends Component {
                                 <div className="col-5" >
                                     <h6 className="customeStyle">{location.country}&ensp;<span className="text-black-50 font-italic">{location.province}</span></h6>
                                 </div>
-                                <div className="col">
+                                <div className=" col col-xs-4">
                                     <h6 className="text-primary customeStyle">{location.latest.confirmed}</h6>
                                 </div>
-                                <div className="col">
+                                <div className="col col-xs-4">
                                     <h6 className="text-success customeStyle">{location.latest.recovered}</h6>
                                 </div>
-                                <div className="col">
+                                <div className="col col-xs-4">
                                     <h6 className="text-danger customeStyle">{location.latest.deaths}</h6>
                                 </div>
                             </div>
