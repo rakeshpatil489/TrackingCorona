@@ -4,5 +4,7 @@
 }
 .customeStyle
 {
-    margin: 0px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+    letter-spacing: 1px !important;
 }
