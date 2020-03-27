@@ -33,7 +33,6 @@ class contentComponent extends Component {
                 console.log(error);
             })
         console.log(this.state.locations);
-        console.log(this.state.loading);
     }
 
 
@@ -60,7 +59,7 @@ class contentComponent extends Component {
 
                 <Card confcase={this.state.confirmed} reccase={this.state.recovered} decase={this.state.deaths} />
 
-                <div className="mt-4">
+                <div className="mt-5">
                     <h5>Cases by country wise</h5>
                     <h6 className="card-subtitle mb-2 text-muted">Total number of countries <span className="badge badge-info">{this.state.locations.length}</span></h6>
                     {displayUI}
