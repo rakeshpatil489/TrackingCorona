@@ -17,7 +17,7 @@ class contentComponent extends Component {
 
     //   axios API call here
     async componentDidMount() {
-
+        window.scrollTo(0, 0);
         await axios.get('https://coronavirus-tracker-api.herokuapp.com/v2/locations')
             .then(res => {
                 const response = res.data;
@@ -40,8 +40,8 @@ class contentComponent extends Component {
         let displayUI;
         if (this.state.loading) {
             displayUI = <div className="text-center">
-                <div class="spinner-grow text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
+                <div className="spinner-grow text-primary" role="status">
+                    <span className="sr-only">Loading...</span>
                 </div>
             </div>
         } else {
