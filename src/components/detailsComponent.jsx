@@ -20,8 +20,8 @@ class detailsComponent extends Component {
 
         const pieData = {
             labels: [
-                'Confirmed Cases',
-                'Recovered Cases',
+                'Confirmed',
+                'Recovered',
                 'Deaths'
             ],
             datasets: [{
@@ -48,8 +48,8 @@ class detailsComponent extends Component {
 
                 <Card confcase={this.props.location.state.cases.confirmed} reccase={this.props.location.state.cases.recovered} decase={this.props.location.state.cases.deaths} />
 
-               <div className="card mt-5 mb-4">
-                  <Doughnut data={pieData} width={50} height={20} />
+               <div className="card mt-5 mb-4" >
+                  <Doughnut data={pieData} width={500} height={250}/>
                </div>
                 
 
