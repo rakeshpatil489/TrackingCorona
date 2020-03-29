@@ -54,7 +54,7 @@ class contentComponent extends Component {
                 </div>
 
                 <div className="mt-4">
-                    <h5>Latest update on <span className="badge badge-secondary">COVID-19</span> worldwide.</h5>
+                    <h5>Latest update on <span className="badge badge-secondary font-weight-bolder">COVID-19</span> worldwide.</h5>
                 </div>
 
                 <Card confcase={this.state.confirmed} reccase={this.state.recovered} decase={this.state.deaths} />
