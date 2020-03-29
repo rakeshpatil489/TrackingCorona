@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import '../style/statsComponent.css';
 
-class statsComponents extends Component {
 
+class statsComponents extends Component {
 
 
 
@@ -18,7 +18,13 @@ class statsComponents extends Component {
                                     <h6 className="text-dark customeStyle">{location.id + 1}</h6>
                                 </div>
                                 <div className="col-md-5 col-10" >
-                                   <Link style={{ textDecoration: 'none' }}  to={{pathname:'/'+location.country, data:location}} >
+                                    <Link style={{ textDecoration: 'none' }} to={{
+                                        pathname: '/' + location.country, state: {
+                                            country: location.country,
+                                            id: location.id,
+                                            countryPopulation: location.country_population,
+                                            cases: location.latest,
+                                            timeDate: location.last_updated }}} >
                                         <h6 className="customeStyle">{location.country}&ensp;<span className="text-black-50 font-italic">{location.province}</span></h6>
                                     </Link>
                                 </div>
@@ -39,6 +45,7 @@ class statsComponents extends Component {
         )
     }
 }
+
 
 
 
