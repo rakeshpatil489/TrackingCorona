@@ -49,8 +49,8 @@ class contentComponent extends Component {
         }
         return (
             <div>
-                <div className="alert alert-info mt-4" role="alert">
-                    <span className="badge badge-info">Info</span>&emsp;Since the API is not providing <strong>RECOVERED CASES</strong> it shows 0.
+                <div className="alert alert-warning mt-4" role="alert">
+                    <span className="badge badge-warning">Info</span>&emsp;This API no longer provides <strong>RECOVERED CASES</strong>.
                 </div>
 
                 <div className="mt-4">
@@ -59,7 +59,9 @@ class contentComponent extends Component {
 
                 <Card confcase={this.state.confirmed} reccase={this.state.recovered} decase={this.state.deaths} />
 
-                <div className="mt-5">
+                <hr/>
+
+                <div className="mt-4">
                     <h5>Cases by country wise</h5>
                     <h6 className="card-subtitle mb-2 text-muted">Total number of countries <span className="badge badge-info">{this.state.locations.length}</span></h6>
                     {displayUI}

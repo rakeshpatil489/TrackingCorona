@@ -11,6 +11,7 @@ class detailsComponent extends Component {
       
         let newTime = this.props.location.state.timeDate.slice(11,16);  
         let newDate = this.props.location.state.timeDate.slice(0,10); 
+        
         return (
             <React.Fragment>
                 <div className="mt-4">

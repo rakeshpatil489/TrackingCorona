@@ -2,19 +2,19 @@
 {
     color:#e0551e;
     background-color: #f135062a !important;
-   
-    
+  	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .recoveryColor
 {
     color:#38c70d;
     background-color: rgba(80, 207, 21, 0.164) !important;
-  
+  	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 .positiveColor
 {
     color:#0e88da;
     background-color: #0c85d627 !important;
+  	box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
    
 }
 .card
