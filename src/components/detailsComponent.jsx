@@ -48,8 +48,8 @@ class detailsComponent extends Component {
 
                 <Card confcase={this.props.location.state.cases.confirmed} reccase={this.props.location.state.cases.recovered} decase={this.props.location.state.cases.deaths} />
 
-               <div className="card mt-5 mb-4" >
-                  <Doughnut data={pieData} width={500} height={250}/>
+               <div className="card mt-4 mb-4" style={{ backgroundColor: '#f4f4f4'}}>
+                  <Doughnut data={pieData} width={500} height={220} />
                </div>
                 
 
