@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import { Doughnut } from 'react-chartjs-2';
 import Card from './cardComponents';
 
-
-
-
-
 class detailsComponent extends Component {
 
 
@@ -48,7 +44,7 @@ class detailsComponent extends Component {
 
                 <Card confcase={this.props.location.state.cases.confirmed} reccase={this.props.location.state.cases.recovered} decase={this.props.location.state.cases.deaths} />
 
-               <div className="card mt-4 mb-4" style={{ backgroundColor: '#f4f4f4'}}>
+               <div className="card mt-4 mb-4" style={{ backgroundColor: '#f9f9f9'}}>
                   <Doughnut data={pieData} width={500} height={220} />
                </div>
                 

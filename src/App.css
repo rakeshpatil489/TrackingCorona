@@ -1,5 +1,6 @@
-.App
+html, body
 {
-    height: 100vw;
+    height: 100vh !important;
+    width: auto;
     margin:0;
 }

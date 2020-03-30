@@ -39,8 +39,8 @@ class contentComponent extends Component {
     render() {
         let displayUI;
         if (this.state.loading) {
-            displayUI = <div className="text-center">
-                <div className="spinner-grow text-primary" role="status">
+            displayUI = <div className="overlay">
+                <div className="spinner-border text-primary custom" role="status">
                     <span className="sr-only">Loading...</span>
                 </div>
             </div>
@@ -50,7 +50,7 @@ class contentComponent extends Component {
         return (
             <div>
                 <div className="alert alert-warning mt-4" role="alert">
-                    <span className="badge badge-warning">Info</span>&emsp;This API no longer provides <strong>RECOVERED CASES</strong>.
+                    <span className="badge badge-warning">Info</span>&emsp;API no longer provides <strong>RECOVERED CASES</strong>.
                 </div>
 
                 <div className="mt-4">
@@ -59,7 +59,7 @@ class contentComponent extends Component {
 
                 <Card confcase={this.state.confirmed} reccase={this.state.recovered} decase={this.state.deaths} />
 
-                <hr/>
+                <hr />
 
                 <div className="mt-4">
                     <h5>Cases by country wise</h5>
