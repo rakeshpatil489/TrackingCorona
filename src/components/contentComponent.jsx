@@ -39,7 +39,7 @@ class contentComponent extends Component {
     render() {
         let displayUI;
         if (this.state.loading) {
-            displayUI = <div className="overlay">
+            displayUI = <div className="overlay ">
                 <div className="spinner-border text-primary custom" role="status">
                     <span className="sr-only">Loading...</span>
                 </div>
