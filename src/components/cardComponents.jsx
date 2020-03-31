@@ -19,7 +19,7 @@ function cardComponents(props) {
                         <div className="card-body">
                             <h5 className="card-title font-weight-bolder">RECOVERED</h5>
                             <h1>{props.reccase}</h1>
-                            <h5 className="font-weight-light">[+{props.newrecover} ]</h5> 
+                            <h5 className="font-weight-light">[ {props.newrecover} ]</h5> 
                         </div>
                     </div>
                 </div>

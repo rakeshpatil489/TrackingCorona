@@ -9,11 +9,11 @@ class detailsComponent extends Component {
     render() {
         // removing commos to make it number
         let confirmedGraph = this.props.location.state.cases;
-        confirmedGraph = Number(confirmedGraph.replace(/\,/g, ""));
+        confirmedGraph = Number(confirmedGraph.replace(/,/g, ""));
         let recoveredGraph = this.props.location.state.recovered;
-        recoveredGraph = Number(recoveredGraph.replace(/\,/g, ""));
+        recoveredGraph = Number(recoveredGraph.replace(/,/g, ""));
         let deathsGraph = this.props.location.state.deaths;
-        deathsGraph = Number(deathsGraph.replace(/\,/g, ""));
+        deathsGraph = Number(deathsGraph.replace(/,/g, ""));
 
         const pieData = {
             labels: [
