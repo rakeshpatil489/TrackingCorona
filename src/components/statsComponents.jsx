@@ -33,13 +33,13 @@ class statsComponents extends Component {
                                     </Link>
                                 </div>
                                 <div className=" col-md-2 col-4">
-                                    <h6 className="text-primary customeStyle">↑&nbsp;{location.cases}</h6>
+                                    <h6 className="text-primary customeStyle">{location.cases}</h6>
                                 </div>
                                 <div className="col-md-2 col-4 ">
                                     <h6 className="text-success customeStyle">{location.total_recovered}</h6>
                                 </div>
                                 <div className="col-md-2 col-4">
-                                    <h6 className="text-danger customeStyle">↓&nbsp;{location.deaths}</h6>
+                                    <h6 className="text-danger customeStyle">{location.deaths}</h6>
                                 </div>
                             </div>
                         </div>
