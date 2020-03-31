@@ -7,12 +7,13 @@ class detailsComponent extends Component {
 
 
     render() {
-
-        let newTime = this.props.location.state.timeDate.slice(11, 16);
-        let newDate = this.props.location.state.timeDate.slice(0, 10);
-        let confirmed = this.props.location.state.cases.confirmed;
-        let recovered = this.props.location.state.cases.recovered;
-        let deaths = this.props.location.state.cases.deaths;
+        // removing commos to make it number
+        let confirmedGraph = this.props.location.state.cases;
+        confirmedGraph = Number(confirmedGraph.replace(/\,/g, ""));
+        let recoveredGraph = this.props.location.state.recovered;
+        recoveredGraph = Number(recoveredGraph.replace(/\,/g, ""));
+        let deathsGraph = this.props.location.state.deaths;
+        deathsGraph = Number(deathsGraph.replace(/\,/g, ""));
 
         const pieData = {
             labels: [
@@ -21,38 +22,46 @@ class detailsComponent extends Component {
                 'Deaths'
             ],
             datasets: [{
-                data: [confirmed,recovered,deaths],
+                data: [confirmedGraph, recoveredGraph, deathsGraph],
                 backgroundColor: [
-                '#36A2EB',
-                '#FF6384',
-                '#FFCE56'
+                    '#36A2EB',
+                    '#FF6384',
+                    '#FFCE56'
                 ],
                 hoverBackgroundColor: [
-                '#36A2EB',
-                '#FF6384',
-                '#FFCE56'
+                    '#36A2EB',
+                    '#FF6384',
+                    '#FFCE56'
                 ]
-            }]   
+            }]
         }
         return (
             <React.Fragment>
 
                 <div className="mt-4">
-                    <h5>Latest update in <span className="text-primary font-weight-bolder">{this.props.location.state.country}</span></h5>
-                    <h6 className="card-subtitle mb-2 text-muted">Last updated at {newTime} on {newDate} </h6>
+                    <h5>Latest update in <span className="badge badge-primary font-weight-bolder">{this.props.location.state.country}</span></h5>
+                    <h6 class="card-subtitle text-muted">Last updated: <span className="text-monospace">{this.props.location.state.time}</span></h6>
                 </div>
 
-                <Card confcase={this.props.location.state.cases.confirmed} reccase={this.props.location.state.cases.recovered} decase={this.props.location.state.cases.deaths} />
+                <Card 
+                confcase={this.props.location.state.cases} 
+                reccase={this.props.location.state.recovered} 
+                decase={this.props.location.state.deaths}  
+                newcases={this.props.location.state.newcases}
+                newdeaths={this.props.location.state.newdeaths}
+                newrecover={this.props.location.state.newrecover} />
 
-               <div className="card mt-4 mb-4" style={{ backgroundColor: '#f9f9f9'}}>
-                  <Doughnut data={pieData} width={500} height={220} />
-               </div>
-                
+               <hr/>
+
+                <div className="card mt-3 mb-3" style={{ backgroundColor: '#f9f9f9' }}>
+                    <Doughnut data={pieData} />
+                </div>
+
 
             </React.Fragment>
         )
     }
-} 
+}
 
 
 

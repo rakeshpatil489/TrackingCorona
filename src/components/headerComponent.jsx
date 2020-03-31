@@ -5,7 +5,7 @@ class headerComponent extends Component {
         return (
             <React.Fragment>
                 <nav className="navbar navbar-dark bg-dark">
-                    <span className="navbar-brand">NovalCorona</span>
+                    <span className="navbar-brand">CORONA-Tracker</span>
                 </nav>
             </React.Fragment>
         )
