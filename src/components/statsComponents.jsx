@@ -29,17 +29,17 @@ class statsComponents extends Component {
                                             recovered:location.total_recovered,
                                             time:this.props.timestamp
                                              }}} >
-                                        <h6 className="customeStyle font-weight-bolder">{location.country_name}&ensp;</h6>
+                                        <h6 className="customeStyle font-weight-bolder">{location.country_name}</h6>
                                     </Link>
                                 </div>
                                 <div className=" col-md-2 col-4">
-                                    <h6 className="text-primary customeStyle">{location.cases}</h6>
+                                    <h6 className="text-primary customeStyle">↑&nbsp;{location.cases}</h6>
                                 </div>
                                 <div className="col-md-2 col-4 ">
                                     <h6 className="text-success customeStyle">{location.total_recovered}</h6>
                                 </div>
                                 <div className="col-md-2 col-4">
-                                    <h6 className="text-danger customeStyle">{location.deaths}</h6>
+                                    <h6 className="text-danger customeStyle">↓&nbsp;{location.deaths}</h6>
                                 </div>
                             </div>
                         </div>
